@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95083EAE1D37D2CD002AD56E /* 小区头条.png in Resources */ = {isa = PBXBuildFile; fileRef = 95083EAD1D37D2CD002AD56E /* 小区头条.png */; };
 		95BD01831D1FDCD400BC78F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD01821D1FDCD400BC78F6 /* main.m */; };
 		95BD01861D1FDCD400BC78F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD01851D1FDCD400BC78F6 /* AppDelegate.m */; };
 		95BD01891D1FDCD400BC78F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD01881D1FDCD400BC78F6 /* ViewController.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95083EAD1D37D2CD002AD56E /* 小区头条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小区头条.png"; sourceTree = "<group>"; };
 		95BD017E1D1FDCD400BC78F6 /* ADRolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADRolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BD01821D1FDCD400BC78F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		95BD01841D1FDCD400BC78F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		95BD01801D1FDCD400BC78F6 /* ADRolling */ = {
 			isa = PBXGroup;
 			children = (
+				95083EAD1D37D2CD002AD56E /* 小区头条.png */,
 				95BD01981D1FE03200BC78F6 /* CLAdCollectionCell.h */,
 				95BD01991D1FE03200BC78F6 /* CLAdCollectionCell.m */,
 				95BD019A1D1FE03200BC78F6 /* CLHomeHeader.h */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95BD01911D1FDCD400BC78F6 /* LaunchScreen.storyboard in Resources */,
+				95083EAE1D37D2CD002AD56E /* 小区头条.png in Resources */,
 				95BD018E1D1FDCD400BC78F6 /* Assets.xcassets in Resources */,
 				95BD018C1D1FDCD400BC78F6 /* Main.storyboard in Resources */,
 			);
@@ -310,6 +314,7 @@
 				95BD01971D1FDCD400BC78F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

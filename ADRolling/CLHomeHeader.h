@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void(^clickCellBlock)();
+typedef void(^clickCellLable1Block)();
+typedef void(^clickCellLable2Block)();
 
 @class CLHomeAdModel;
 
@@ -15,16 +16,12 @@ typedef void(^clickCellBlock)();
 
 @property (nonatomic, strong) NSArray *newses;
 
-// item 的尺寸
-/**宽度*/
-@property (nonatomic,assign) NSInteger ImgW;
-/**高度*/
-@property (nonatomic,assign) NSInteger ImgH;
 // 放在外部是为了切换另一个页面时，关闭定时器
 @property(nonatomic,strong) NSTimer *timer;
 - (void)removeTimer;
 - (void)addTimer;
 
-@property (nonatomic,copy) clickCellBlock cliclCell;
+@property (nonatomic,copy) clickCellLable1Block cliclCelllable1;
+@property (nonatomic,copy) clickCellLable2Block cliclCelllable2;
 
 @end

@@ -8,24 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^clickImageBlock)();
+typedef void(^clickLable1Block)();
+typedef void(^clickLable2Block)();
+
 @class CLHomeAdModel;
 
 @interface CLAdCollectionCell : UICollectionViewCell
 
-// item 的尺寸
-/**宽度*/
-@property (nonatomic,assign) NSInteger cellW;
-/**高度*/
-@property (nonatomic,assign) NSInteger cellH;
-
-/**广告*/
-@property (nonatomic,strong) UIImageView *adImageView;
-
 /**广告图片模型*/
 //@property (nonatomic,strong) CLHomeAdModel *adModel;
-@property (nonatomic,strong) NSString *adUrl;
+@property (nonatomic,strong) NSArray *contentArray;
 
-@property (nonatomic,copy) clickImageBlock clickImg;
+@property (nonatomic,strong) UILabel *lableNew;
+@property (nonatomic,strong) UILabel *lableHot;
+@property (nonatomic,strong) UILabel *lableContent1;
+@property (nonatomic,strong) UILabel *lableContent2;
+
+@property (nonatomic,copy) clickLable1Block clickLable1;
+
+@property (nonatomic,copy) clickLable2Block clickLable2;
 
 @end

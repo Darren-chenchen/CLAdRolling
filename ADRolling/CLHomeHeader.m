@@ -28,12 +28,10 @@ static NSString *ADID = @"adCell";
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // 充当占位图片
-        UIImageView *placehoder = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
-        placehoder.image = [UIImage imageNamed:@"index_top_zhanweizhi"];
-        [self addSubview:placehoder];
-        placehoder.userInteractionEnabled = YES;
-        self.placehoder = placehoder;
+        
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 60)];
+        imgView.image = [UIImage imageNamed:@"小区头条"];
+        [self addSubview:imgView];
     }
     return self;
 }
@@ -49,10 +47,7 @@ static NSString *ADID = @"adCell";
     [super layoutSubviews];
     // 创建滚动视图
     [self setupCollectionView];
-    // 开启定时器
-    if (self.newses.count>1) {
-        [self addTimer];
-    }
+    [self addTimer];
     [self.placehoder removeFromSuperview];
 
 }
@@ -64,8 +59,8 @@ static NSString *ADID = @"adCell";
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.minimumLineSpacing = 0;
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.ImgW, self.ImgH) collectionViewLayout:layout];
-    layout.itemSize = CGSizeMake(self.ImgW, self.ImgH);
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(80, 0, self.frame.size.width-80, self.frame.size.height) collectionViewLayout:layout];
+    layout.itemSize = CGSizeMake(self.frame.size.width-80, self.frame.size.height);
     collectionView.showsVerticalScrollIndicator = NO;
     collectionView.scrollEnabled = NO;
     collectionView.delegate = self;
@@ -144,13 +139,13 @@ static NSString *ADID = @"adCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CLAdCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ADID forIndexPath:indexPath];
-    cell.adUrl = self.newses[indexPath.row];
-    cell.cellW = self.ImgW;
-    cell.cellH = self.ImgH;
-    
+    cell.contentArray = self.newses[indexPath.row];
     __weak CLHomeHeader *weakSelf = self;
-    cell.clickImg = ^{
-        weakSelf.cliclCell();
+    cell.clickLable1 = ^{
+        weakSelf.cliclCelllable1();
+    };
+    cell.clickLable2 = ^{
+        weakSelf.cliclCelllable2();
     };
     return cell;
 }
